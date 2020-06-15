@@ -1,0 +1,27 @@
+{
+	"name": "99c68cd1_webiny-new-nrdrei_api_dev_filesManage",
+	"description": "Triggered when a file is deleted.",
+	"memory": 512,
+	"timeout": 10,
+	"code": "./files/manage/build",
+	"shims": [],
+	"handler": "handler.handler",
+	"runtime": "nodejs10.x",
+	"env": {
+		"S3_BUCKET": "99c68cd1-webiny-new-nrdrei-files"
+	},
+	"role": {
+		"arn": "arn:aws:iam::824028203338:role/99c68cd1-7g7jqqc"
+	},
+	"arn": "arn:aws:lambda:eu-central-1:824028203338:function:99c68cd1_webiny-new-nrdrei_api_dev_filesManage",
+	"region": "eu-central-1",
+	"permissions": [
+		{
+			"Action": "lambda:InvokeFunction",
+			"Principal": "s3.amazonaws.com",
+			"StatementId": "s3invoke",
+			"SourceArn": "arn:aws:s3:::99c68cd1-webiny-new-nrdrei-files",
+			"FunctionName": "99c68cd1_webiny-new-nrdrei_api_dev_filesManage"
+		}
+	]
+}

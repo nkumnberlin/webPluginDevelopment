@@ -1,15 +1,12 @@
 import editorPlugin from "./iFrame/admin/editorPlugin";
 import advancesSettings from "./iFrame/admin/advancesSettings";
-import Switch from './switch/admin/switchEditor'
-import AdditionalSettings from './customSettings/index'
 import RenderIframe from './iFrame/render/renderPlugin'
+import SwitchEditor from './switch/admin/switchEditor'
 
 const plugins = [
-    editorPlugin(),
-    advancesSettings(),
-    Switch(),
-    AdditionalSettings,
-    RenderIframe()
+    //  editorPlugin(),
+    // advancesSettings(),
+    // RenderIframe()
 ]
 
 export default plugins;

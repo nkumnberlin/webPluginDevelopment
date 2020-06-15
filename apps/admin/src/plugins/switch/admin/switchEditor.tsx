@@ -3,8 +3,6 @@ import styled from "@emotion/styled";
 import {
     PbEditorPageElementPlugin
 } from "@webiny/app-page-builder/types";
-// @ts-ignore
-import {ReactComponent as IFrameIcon} from "./iframe-icon.svg"
 import Switch from "./switch";
 
 const PreviewBox = styled("div")({

@@ -1,0 +1,22 @@
+{
+	"output": {
+		"name": "99c68cd1_webiny-new-nrdrei_api_dev_settingsManager",
+		"description": "Settings Manager",
+		"memory": 128,
+		"timeout": 20,
+		"code": "./settingsManager/build",
+		"shims": [],
+		"handler": "handler.handler",
+		"runtime": "nodejs10.x",
+		"env": {
+			"DB_PROXY_FUNCTION": "arn:aws:lambda:eu-central-1:824028203338:function:99c68cd1_webiny-new-nrdrei_api_dev_databaseProxy",
+			"DEBUG": "webiny*"
+		},
+		"role": {
+			"arn": "arn:aws:iam::824028203338:role/99c68cd1-79vzq18"
+		},
+		"arn": "arn:aws:lambda:eu-central-1:824028203338:function:99c68cd1_webiny-new-nrdrei_api_dev_settingsManager",
+		"region": "eu-central-1",
+		"permissions": []
+	}
+}

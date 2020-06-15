@@ -1,0 +1,9 @@
+{
+	"name": "99c68cd1-g5akoj8h",
+	"arn": "arn:aws:iam::824028203338:role/99c68cd1-g5akoj8h",
+	"service": "lambda.amazonaws.com",
+	"policy": {
+		"arn": "arn:aws:iam::aws:policy/AdministratorAccess"
+	},
+	"region": "eu-central-1"
+}

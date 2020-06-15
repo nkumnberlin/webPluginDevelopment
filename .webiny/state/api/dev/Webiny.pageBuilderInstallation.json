@@ -1,0 +1,14 @@
+{
+	"bucket": "99c68cd1-webiny-new-nrdrei-files",
+	"region": "eu-central-1",
+	"object": {
+		"source": "@webiny/api-page-builder/installation",
+		"key": "page-builder-installation.zip",
+		"zip": true
+	},
+	"deleteObjectOnRemove": true,
+	"hash": "0xwTlSaZebNLLDKdzENhthNcWIE=",
+	"output": {
+		"key": "page-builder-installation.zip"
+	}
+}

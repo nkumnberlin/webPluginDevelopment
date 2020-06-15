@@ -1,9 +1,16 @@
-import React, {useState} from 'react';
+import React, {useState, useMemo} from 'react';
 import {Switch} from '@rmwc/switch'
 import {css} from "emotion"
 import {ElementRoot} from '@webiny/app-page-builder/render/components/ElementRoot'
 import ConnectedElement from "@webiny/app-page-builder/editor/components/ConnectedElement";
 import styled from 'styled-components';
+import {getPlugin, getPlugins} from '@webiny/plugins';
+import {
+    PbEditorPageElementPlugin
+} from "@webiny/app-page-builder/types";
+import {connect} from '@webiny/app-page-builder/editor/redux'
+import {getElement} from "@webiny/app-page-builder/editor/selectors";
+import {Store} from '@webiny/app-page-builder/types'
 
 const outerWrapper = css({
     boxSizing: "border-box"
@@ -31,7 +38,14 @@ const SwitchElement = (props) => (
                     const className = getAllClasses(
                         "webiny-pb-base-page-element-style webiny-pb-base-page-element-switch",
                         center
-                    )
+                    );
+                    // const Loader = useMemo(() => {
+                    //     const plugins = getPlugins<PbEditorPageElementPlugin>("pb-editor-page-element-switch");
+                    //     const pl = plugins.find(pl => pl.elementType === "switch");
+                    //     debugger;
+                    //     return pl ? pl.plugin : null;
+                    // }, []);
+                    debugger;
                     return (
                         <div className={className} style={elementStyle}>
                             <div id={element.id}/>
@@ -47,4 +61,6 @@ const SwitchElement = (props) => (
     </ElementRoot>
 )
 
-export default SwitchElement;
+export default connect<any, any, any>(
+    (state, props) => ({element: getElement(state, props.elementId)}),
+)(SwitchElement)

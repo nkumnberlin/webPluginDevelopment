@@ -1,0 +1,20 @@
+{
+	"name": "99c68cd1_webiny-new-nrdrei_api_dev_databaseProxy",
+	"description": "Handles interaction with MongoDB",
+	"memory": 512,
+	"timeout": 30,
+	"code": "./databaseProxy/build",
+	"shims": [],
+	"handler": "handler.handler",
+	"runtime": "nodejs10.x",
+	"env": {
+		"MONGODB_SERVER": "[mongodb://webiny:mDknLGej9qUqT64@18.157.145.125/webiny-nicolas2?retryWrites=true]",
+		"MONGODB_NAME": "webiny-nicolas2"
+	},
+	"role": {
+		"arn": "arn:aws:iam::824028203338:role/99c68cd1-vgwgydf"
+	},
+	"arn": "arn:aws:lambda:eu-central-1:824028203338:function:99c68cd1_webiny-new-nrdrei_api_dev_databaseProxy",
+	"region": "eu-central-1",
+	"permissions": []
+}

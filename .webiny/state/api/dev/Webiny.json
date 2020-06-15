@@ -1,0 +1,805 @@
+{
+	"components": {
+		"apolloGateway": "C:\\Users\\KumnickAdmin\\Documents\\webPluginDevelopment\\node_modules\\@webiny\\serverless-function\\serverless.js",
+		"databaseProxy": "C:\\Users\\KumnickAdmin\\Documents\\webPluginDevelopment\\node_modules\\@webiny\\serverless-function\\serverless.js",
+		"cognito": "C:\\Users\\KumnickAdmin\\Documents\\webPluginDevelopment\\node_modules\\@webiny\\serverless-aws-cognito-user-pool\\serverless.js",
+		"settingsManager": "C:\\Users\\KumnickAdmin\\Documents\\webPluginDevelopment\\node_modules\\@webiny\\serverless-function\\serverless.js",
+		"securityGraphQL": "C:\\Users\\KumnickAdmin\\Documents\\webPluginDevelopment\\node_modules\\@webiny\\serverless-function\\serverless.js",
+		"securityValidateAccessToken": "C:\\Users\\KumnickAdmin\\Documents\\webPluginDevelopment\\node_modules\\@webiny\\serverless-function\\serverless.js",
+		"filesDownload": "C:\\Users\\KumnickAdmin\\Documents\\webPluginDevelopment\\node_modules\\@webiny\\serverless-function\\serverless.js",
+		"imageTransformer": "C:\\Users\\KumnickAdmin\\Documents\\webPluginDevelopment\\node_modules\\@webiny\\serverless-function\\serverless.js",
+		"filesManage": "C:\\Users\\KumnickAdmin\\Documents\\webPluginDevelopment\\node_modules\\@webiny\\serverless-function\\serverless.js",
+		"filesBucket": "C:\\Users\\KumnickAdmin\\Documents\\webPluginDevelopment\\node_modules\\@webiny\\serverless-aws-s3\\serverless.js",
+		"filesGraphQL": "C:\\Users\\KumnickAdmin\\Documents\\webPluginDevelopment\\node_modules\\@webiny\\serverless-function\\serverless.js",
+		"i18nGraphQL": "C:\\Users\\KumnickAdmin\\Documents\\webPluginDevelopment\\node_modules\\@webiny\\serverless-function\\serverless.js",
+		"i18nLocales": "C:\\Users\\KumnickAdmin\\Documents\\webPluginDevelopment\\node_modules\\@webiny\\serverless-function\\serverless.js",
+		"pageBuilderInstallation": "C:\\Users\\KumnickAdmin\\Documents\\webPluginDevelopment\\node_modules\\@webiny\\serverless-aws-s3-object\\serverless.js",
+		"pageBuilderGraphQL": "C:\\Users\\KumnickAdmin\\Documents\\webPluginDevelopment\\node_modules\\@webiny\\serverless-function\\serverless.js",
+		"formBuilderGraphQL": "C:\\Users\\KumnickAdmin\\Documents\\webPluginDevelopment\\node_modules\\@webiny\\serverless-function\\serverless.js",
+		"cmsGraphQL": "C:\\Users\\KumnickAdmin\\Documents\\webPluginDevelopment\\node_modules\\@webiny\\serverless-function\\serverless.js",
+		"cmsContent": "C:\\Users\\KumnickAdmin\\Documents\\webPluginDevelopment\\node_modules\\@webiny\\serverless-function\\serverless.js",
+		"cmsDataManager": "C:\\Users\\KumnickAdmin\\Documents\\webPluginDevelopment\\node_modules\\@webiny\\serverless-function\\serverless.js",
+		"api": "C:\\Users\\KumnickAdmin\\Documents\\webPluginDevelopment\\node_modules\\@webiny\\serverless-api-gateway\\serverless.js",
+		"cdn": "C:\\Users\\KumnickAdmin\\Documents\\webPluginDevelopment\\node_modules\\@webiny\\serverless-aws-cloudfront\\serverless.js"
+	},
+	"outputs": {
+		"apolloGateway": {
+			"name": "99c68cd1_webiny-new-nrdrei_api_dev_apolloGateway",
+			"description": "Apollo Gateway",
+			"memory": 512,
+			"timeout": 30,
+			"code": "./apolloGateway/build",
+			"shims": [],
+			"handler": "handler.handler",
+			"runtime": "nodejs10.x",
+			"env": {
+				"COGNITO_REGION": "eu-central-1",
+				"COGNITO_USER_POOL_ID": "eu-central-1_YjcEzpeok",
+				"DEBUG": "true",
+				"DB_PROXY_FUNCTION": "arn:aws:lambda:eu-central-1:824028203338:function:99c68cd1_webiny-new-nrdrei_api_dev_databaseProxy",
+				"GRAPHQL_INTROSPECTION": "true",
+				"GRAPHQL_PLAYGROUND": "true",
+				"JWT_TOKEN_EXPIRES_IN": "2592000",
+				"JWT_TOKEN_SECRET": "7MHbYOo15bPugOkEK8zO5bfSY4nnhkWEwLdwHvUAp4aUg+1gHVdSY3zT9CkV",
+				"SETTINGS_MANAGER_FUNCTION": "arn:aws:lambda:eu-central-1:824028203338:function:99c68cd1_webiny-new-nrdrei_api_dev_settingsManager",
+				"VALIDATE_ACCESS_TOKEN_FUNCTION": "99c68cd1_webiny-new-nrdrei_api_dev_securityValidateAccessToken",
+				"LAMBDA_SERVICE_SECURITY": "99c68cd1_webiny-new-nrdrei_api_dev_securityGraphQL",
+				"LAMBDA_SERVICE_I18N": "99c68cd1_webiny-new-nrdrei_api_dev_i18nGraphQL",
+				"LAMBDA_SERVICE_FILES": "99c68cd1_webiny-new-nrdrei_api_dev_filesGraphQL",
+				"LAMBDA_SERVICE_PAGE_BUILDER": "99c68cd1_webiny-new-nrdrei_api_dev_pageBuilderGraphQL",
+				"LAMBDA_SERVICE_FORM_BUILDER": "99c68cd1_webiny-new-nrdrei_api_dev_formBuilderGraphQL",
+				"LAMBDA_SERVICE_HEADLESS_CMS": "99c68cd1_webiny-new-nrdrei_api_dev_cmsGraphQL"
+			},
+			"role": {
+				"arn": "arn:aws:iam::824028203338:role/99c68cd1-znuc7d"
+			},
+			"arn": "arn:aws:lambda:eu-central-1:824028203338:function:99c68cd1_webiny-new-nrdrei_api_dev_apolloGateway",
+			"region": "eu-central-1",
+			"permissions": []
+		},
+		"databaseProxy": {
+			"name": "99c68cd1_webiny-new-nrdrei_api_dev_databaseProxy",
+			"description": "Handles interaction with MongoDB",
+			"memory": 512,
+			"timeout": 30,
+			"code": "./databaseProxy/build",
+			"shims": [],
+			"handler": "handler.handler",
+			"runtime": "nodejs10.x",
+			"env": {
+				"MONGODB_SERVER": "[mongodb://webiny:mDknLGej9qUqT64@18.157.145.125/webiny-nicolas2?retryWrites=true]",
+				"MONGODB_NAME": "webiny-nicolas2"
+			},
+			"role": {
+				"arn": "arn:aws:iam::824028203338:role/99c68cd1-vgwgydf"
+			},
+			"arn": "arn:aws:lambda:eu-central-1:824028203338:function:99c68cd1_webiny-new-nrdrei_api_dev_databaseProxy",
+			"region": "eu-central-1",
+			"permissions": [],
+			"concurrencyLimit": 15
+		},
+		"cognito": {
+			"appClients": [
+				{
+					"UserPoolId": "eu-central-1_YjcEzpeok",
+					"ClientName": "ReactApp",
+					"ClientId": "1u6lb6kt82gpb6ab1fuad1n1q1",
+					"LastModifiedDate": "2020-06-15T12:43:35.404Z",
+					"CreationDate": "2020-06-15T12:43:35.404Z",
+					"RefreshTokenValidity": 30,
+					"AllowedOAuthFlowsUserPoolClient": false
+				}
+			],
+			"userPool": {
+				"Id": "eu-central-1_YjcEzpeok",
+				"Name": "99c68cd1_webiny-new-nrdrei_api_dev_cognito",
+				"Policies": {
+					"PasswordPolicy": {
+						"MinimumLength": 8,
+						"RequireUppercase": false,
+						"RequireLowercase": false,
+						"RequireNumbers": false,
+						"RequireSymbols": false,
+						"TemporaryPasswordValidityDays": 7
+					}
+				},
+				"LambdaConfig": {},
+				"LastModifiedDate": "2020-06-15T12:43:35.240Z",
+				"CreationDate": "2020-06-15T12:43:35.240Z",
+				"SchemaAttributes": [
+					{
+						"Name": "sub",
+						"AttributeDataType": "String",
+						"DeveloperOnlyAttribute": false,
+						"Mutable": false,
+						"Required": true,
+						"StringAttributeConstraints": {
+							"MinLength": "1",
+							"MaxLength": "2048"
+						}
+					},
+					{
+						"Name": "name",
+						"AttributeDataType": "String",
+						"DeveloperOnlyAttribute": false,
+						"Mutable": true,
+						"Required": false,
+						"StringAttributeConstraints": {
+							"MinLength": "0",
+							"MaxLength": "2048"
+						}
+					},
+					{
+						"Name": "given_name",
+						"AttributeDataType": "String",
+						"DeveloperOnlyAttribute": false,
+						"Mutable": true,
+						"Required": true,
+						"StringAttributeConstraints": {
+							"MinLength": "0",
+							"MaxLength": "2048"
+						}
+					},
+					{
+						"Name": "family_name",
+						"AttributeDataType": "String",
+						"DeveloperOnlyAttribute": false,
+						"Mutable": true,
+						"Required": true,
+						"StringAttributeConstraints": {
+							"MinLength": "0",
+							"MaxLength": "2048"
+						}
+					},
+					{
+						"Name": "middle_name",
+						"AttributeDataType": "String",
+						"DeveloperOnlyAttribute": false,
+						"Mutable": true,
+						"Required": false,
+						"StringAttributeConstraints": {
+							"MinLength": "0",
+							"MaxLength": "2048"
+						}
+					},
+					{
+						"Name": "nickname",
+						"AttributeDataType": "String",
+						"DeveloperOnlyAttribute": false,
+						"Mutable": true,
+						"Required": false,
+						"StringAttributeConstraints": {
+							"MinLength": "0",
+							"MaxLength": "2048"
+						}
+					},
+					{
+						"Name": "preferred_username",
+						"AttributeDataType": "String",
+						"DeveloperOnlyAttribute": false,
+						"Mutable": true,
+						"Required": false,
+						"StringAttributeConstraints": {
+							"MinLength": "0",
+							"MaxLength": "2048"
+						}
+					},
+					{
+						"Name": "profile",
+						"AttributeDataType": "String",
+						"DeveloperOnlyAttribute": false,
+						"Mutable": true,
+						"Required": false,
+						"StringAttributeConstraints": {
+							"MinLength": "0",
+							"MaxLength": "2048"
+						}
+					},
+					{
+						"Name": "picture",
+						"AttributeDataType": "String",
+						"DeveloperOnlyAttribute": false,
+						"Mutable": true,
+						"Required": false,
+						"StringAttributeConstraints": {
+							"MinLength": "0",
+							"MaxLength": "2048"
+						}
+					},
+					{
+						"Name": "website",
+						"AttributeDataType": "String",
+						"DeveloperOnlyAttribute": false,
+						"Mutable": true,
+						"Required": false,
+						"StringAttributeConstraints": {
+							"MinLength": "0",
+							"MaxLength": "2048"
+						}
+					},
+					{
+						"Name": "email",
+						"AttributeDataType": "String",
+						"DeveloperOnlyAttribute": false,
+						"Mutable": true,
+						"Required": true,
+						"StringAttributeConstraints": {
+							"MinLength": "0",
+							"MaxLength": "2048"
+						}
+					},
+					{
+						"Name": "email_verified",
+						"AttributeDataType": "Boolean",
+						"DeveloperOnlyAttribute": false,
+						"Mutable": true,
+						"Required": false
+					},
+					{
+						"Name": "gender",
+						"AttributeDataType": "String",
+						"DeveloperOnlyAttribute": false,
+						"Mutable": true,
+						"Required": false,
+						"StringAttributeConstraints": {
+							"MinLength": "0",
+							"MaxLength": "2048"
+						}
+					},
+					{
+						"Name": "birthdate",
+						"AttributeDataType": "String",
+						"DeveloperOnlyAttribute": false,
+						"Mutable": true,
+						"Required": false,
+						"StringAttributeConstraints": {
+							"MinLength": "10",
+							"MaxLength": "10"
+						}
+					},
+					{
+						"Name": "zoneinfo",
+						"AttributeDataType": "String",
+						"DeveloperOnlyAttribute": false,
+						"Mutable": true,
+						"Required": false,
+						"StringAttributeConstraints": {
+							"MinLength": "0",
+							"MaxLength": "2048"
+						}
+					},
+					{
+						"Name": "locale",
+						"AttributeDataType": "String",
+						"DeveloperOnlyAttribute": false,
+						"Mutable": true,
+						"Required": false,
+						"StringAttributeConstraints": {
+							"MinLength": "0",
+							"MaxLength": "2048"
+						}
+					},
+					{
+						"Name": "phone_number",
+						"AttributeDataType": "String",
+						"DeveloperOnlyAttribute": false,
+						"Mutable": true,
+						"Required": false,
+						"StringAttributeConstraints": {
+							"MinLength": "0",
+							"MaxLength": "2048"
+						}
+					},
+					{
+						"Name": "phone_number_verified",
+						"AttributeDataType": "Boolean",
+						"DeveloperOnlyAttribute": false,
+						"Mutable": true,
+						"Required": false
+					},
+					{
+						"Name": "address",
+						"AttributeDataType": "String",
+						"DeveloperOnlyAttribute": false,
+						"Mutable": true,
+						"Required": false,
+						"StringAttributeConstraints": {
+							"MinLength": "0",
+							"MaxLength": "2048"
+						}
+					},
+					{
+						"Name": "updated_at",
+						"AttributeDataType": "Number",
+						"DeveloperOnlyAttribute": false,
+						"Mutable": true,
+						"Required": false,
+						"NumberAttributeConstraints": {
+							"MinValue": "0"
+						}
+					}
+				],
+				"AutoVerifiedAttributes": [
+					"email"
+				],
+				"UsernameAttributes": [
+					"email"
+				],
+				"VerificationMessageTemplate": {
+					"DefaultEmailOption": "CONFIRM_WITH_CODE"
+				},
+				"MfaConfiguration": "OFF",
+				"EstimatedNumberOfUsers": 0,
+				"EmailConfiguration": {
+					"EmailSendingAccount": "COGNITO_DEFAULT"
+				},
+				"AdminCreateUserConfig": {
+					"AllowAdminCreateUserOnly": true,
+					"UnusedAccountValidityDays": 7
+				},
+				"UserPoolAddOns": {
+					"AdvancedSecurityMode": "OFF"
+				},
+				"Arn": "arn:aws:cognito-idp:eu-central-1:824028203338:userpool/eu-central-1_YjcEzpeok",
+				"Region": "eu-central-1"
+			}
+		},
+		"settingsManager": {
+			"name": "99c68cd1_webiny-new-nrdrei_api_dev_settingsManager",
+			"description": "Settings Manager",
+			"memory": 128,
+			"timeout": 20,
+			"code": "./settingsManager/build",
+			"shims": [],
+			"handler": "handler.handler",
+			"runtime": "nodejs10.x",
+			"env": {
+				"DB_PROXY_FUNCTION": "arn:aws:lambda:eu-central-1:824028203338:function:99c68cd1_webiny-new-nrdrei_api_dev_databaseProxy",
+				"DEBUG": "webiny*"
+			},
+			"role": {
+				"arn": "arn:aws:iam::824028203338:role/99c68cd1-79vzq18"
+			},
+			"arn": "arn:aws:lambda:eu-central-1:824028203338:function:99c68cd1_webiny-new-nrdrei_api_dev_settingsManager",
+			"region": "eu-central-1",
+			"permissions": []
+		},
+		"securityGraphQL": {
+			"name": "99c68cd1_webiny-new-nrdrei_api_dev_securityGraphQL",
+			"description": "Security GraphQL API",
+			"memory": 512,
+			"timeout": 30,
+			"code": "./security/graphql/build",
+			"shims": [],
+			"handler": "handler.handler",
+			"runtime": "nodejs10.x",
+			"env": {
+				"COGNITO_REGION": "eu-central-1",
+				"COGNITO_USER_POOL_ID": "eu-central-1_YjcEzpeok",
+				"DEBUG": "true",
+				"DB_PROXY_FUNCTION": "arn:aws:lambda:eu-central-1:824028203338:function:99c68cd1_webiny-new-nrdrei_api_dev_databaseProxy",
+				"GRAPHQL_INTROSPECTION": "true",
+				"GRAPHQL_PLAYGROUND": "true",
+				"JWT_TOKEN_EXPIRES_IN": "2592000",
+				"JWT_TOKEN_SECRET": "7MHbYOo15bPugOkEK8zO5bfSY4nnhkWEwLdwHvUAp4aUg+1gHVdSY3zT9CkV",
+				"SETTINGS_MANAGER_FUNCTION": "arn:aws:lambda:eu-central-1:824028203338:function:99c68cd1_webiny-new-nrdrei_api_dev_settingsManager",
+				"VALIDATE_ACCESS_TOKEN_FUNCTION": "99c68cd1_webiny-new-nrdrei_api_dev_securityValidateAccessToken"
+			},
+			"role": {
+				"arn": "arn:aws:iam::824028203338:role/99c68cd1-4gg7h55"
+			},
+			"arn": "arn:aws:lambda:eu-central-1:824028203338:function:99c68cd1_webiny-new-nrdrei_api_dev_securityGraphQL",
+			"region": "eu-central-1",
+			"permissions": []
+		},
+		"securityValidateAccessToken": {
+			"name": "99c68cd1_webiny-new-nrdrei_api_dev_securityValidateAccessToken",
+			"description": "AWS Lambda Component",
+			"memory": 256,
+			"timeout": 30,
+			"code": "./security/validateAccessToken/build",
+			"shims": [],
+			"handler": "handler.handler",
+			"runtime": "nodejs10.x",
+			"env": {
+				"DB_PROXY_FUNCTION": "arn:aws:lambda:eu-central-1:824028203338:function:99c68cd1_webiny-new-nrdrei_api_dev_databaseProxy",
+				"DEBUG": "webiny*"
+			},
+			"role": {
+				"arn": "arn:aws:iam::824028203338:role/99c68cd1-g5akoj8h"
+			},
+			"arn": "arn:aws:lambda:eu-central-1:824028203338:function:99c68cd1_webiny-new-nrdrei_api_dev_securityValidateAccessToken",
+			"region": "eu-central-1",
+			"permissions": []
+		},
+		"filesDownload": {
+			"name": "99c68cd1_webiny-new-nrdrei_api_dev_filesDownload",
+			"description": "Serves previously uploaded files.",
+			"memory": 512,
+			"timeout": 10,
+			"code": "./files/download/build",
+			"shims": [],
+			"handler": "handler.handler",
+			"runtime": "nodejs10.x",
+			"env": {
+				"S3_BUCKET": "99c68cd1-webiny-new-nrdrei-files",
+				"IMAGE_TRANSFORMER_FUNCTION": "arn:aws:lambda:eu-central-1:824028203338:function:99c68cd1_webiny-new-nrdrei_api_dev_imageTransformer"
+			},
+			"role": {
+				"arn": "arn:aws:iam::824028203338:role/99c68cd1-30r6cwi"
+			},
+			"arn": "arn:aws:lambda:eu-central-1:824028203338:function:99c68cd1_webiny-new-nrdrei_api_dev_filesDownload",
+			"region": "eu-central-1",
+			"permissions": []
+		},
+		"imageTransformer": {
+			"name": "99c68cd1_webiny-new-nrdrei_api_dev_imageTransformer",
+			"description": "Performs image optimization, resizing, etc.",
+			"memory": 1600,
+			"timeout": 30,
+			"code": "./files/transform/build",
+			"shims": [],
+			"handler": "handler.handler",
+			"runtime": "nodejs10.x",
+			"env": {
+				"S3_BUCKET": "99c68cd1-webiny-new-nrdrei-files"
+			},
+			"role": {
+				"arn": "arn:aws:iam::824028203338:role/99c68cd1-t5cyirn"
+			},
+			"arn": "arn:aws:lambda:eu-central-1:824028203338:function:99c68cd1_webiny-new-nrdrei_api_dev_imageTransformer",
+			"region": "eu-central-1",
+			"permissions": []
+		},
+		"filesManage": {
+			"name": "99c68cd1_webiny-new-nrdrei_api_dev_filesManage",
+			"description": "Triggered when a file is deleted.",
+			"memory": 512,
+			"timeout": 10,
+			"code": "./files/manage/build",
+			"shims": [],
+			"handler": "handler.handler",
+			"runtime": "nodejs10.x",
+			"env": {
+				"S3_BUCKET": "99c68cd1-webiny-new-nrdrei-files"
+			},
+			"role": {
+				"arn": "arn:aws:iam::824028203338:role/99c68cd1-7g7jqqc"
+			},
+			"arn": "arn:aws:lambda:eu-central-1:824028203338:function:99c68cd1_webiny-new-nrdrei_api_dev_filesManage",
+			"region": "eu-central-1",
+			"permissions": [
+				{
+					"Action": "lambda:InvokeFunction",
+					"Principal": "s3.amazonaws.com",
+					"StatementId": "s3invoke",
+					"SourceArn": "arn:aws:s3:::99c68cd1-webiny-new-nrdrei-files",
+					"FunctionName": "99c68cd1_webiny-new-nrdrei_api_dev_filesManage"
+				}
+			]
+		},
+		"filesBucket": {
+			"name": "99c68cd1-webiny-new-nrdrei-files",
+			"region": "eu-central-1",
+			"accelerated": true,
+			"deleteBucketOnRemove": false,
+			"notificationConfiguration": {
+				"LambdaFunctionConfigurations": [
+					{
+						"LambdaFunctionArn": "arn:aws:lambda:eu-central-1:824028203338:function:99c68cd1_webiny-new-nrdrei_api_dev_filesManage",
+						"Events": [
+							"s3:ObjectRemoved:*"
+						]
+					}
+				]
+			},
+			"url": "https://99c68cd1-webiny-new-nrdrei-files.s3.amazonaws.com"
+		},
+		"filesGraphQL": {
+			"name": "99c68cd1_webiny-new-nrdrei_api_dev_filesGraphQL",
+			"description": "Files GraphQL API",
+			"memory": 512,
+			"timeout": 10,
+			"code": "./files/graphql/build",
+			"shims": [],
+			"handler": "handler.handler",
+			"runtime": "nodejs10.x",
+			"env": {
+				"COGNITO_REGION": "eu-central-1",
+				"COGNITO_USER_POOL_ID": "eu-central-1_YjcEzpeok",
+				"DEBUG": "true",
+				"DB_PROXY_FUNCTION": "arn:aws:lambda:eu-central-1:824028203338:function:99c68cd1_webiny-new-nrdrei_api_dev_databaseProxy",
+				"GRAPHQL_INTROSPECTION": "true",
+				"GRAPHQL_PLAYGROUND": "true",
+				"JWT_TOKEN_EXPIRES_IN": "2592000",
+				"JWT_TOKEN_SECRET": "7MHbYOo15bPugOkEK8zO5bfSY4nnhkWEwLdwHvUAp4aUg+1gHVdSY3zT9CkV",
+				"SETTINGS_MANAGER_FUNCTION": "arn:aws:lambda:eu-central-1:824028203338:function:99c68cd1_webiny-new-nrdrei_api_dev_settingsManager",
+				"VALIDATE_ACCESS_TOKEN_FUNCTION": "99c68cd1_webiny-new-nrdrei_api_dev_securityValidateAccessToken",
+				"S3_BUCKET": "99c68cd1-webiny-new-nrdrei-files",
+				"UPLOAD_MIN_FILE_SIZE": "0",
+				"UPLOAD_MAX_FILE_SIZE": "26214400"
+			},
+			"role": {
+				"arn": "arn:aws:iam::824028203338:role/99c68cd1-2sa4mj"
+			},
+			"arn": "arn:aws:lambda:eu-central-1:824028203338:function:99c68cd1_webiny-new-nrdrei_api_dev_filesGraphQL",
+			"region": "eu-central-1",
+			"permissions": []
+		},
+		"i18nGraphQL": {
+			"name": "99c68cd1_webiny-new-nrdrei_api_dev_i18nGraphQL",
+			"description": "I18N GraphQL API",
+			"memory": 512,
+			"timeout": 10,
+			"code": "./i18n/graphql/build",
+			"shims": [],
+			"handler": "handler.handler",
+			"runtime": "nodejs10.x",
+			"env": {
+				"COGNITO_REGION": "eu-central-1",
+				"COGNITO_USER_POOL_ID": "eu-central-1_YjcEzpeok",
+				"DEBUG": "true",
+				"DB_PROXY_FUNCTION": "arn:aws:lambda:eu-central-1:824028203338:function:99c68cd1_webiny-new-nrdrei_api_dev_databaseProxy",
+				"GRAPHQL_INTROSPECTION": "true",
+				"GRAPHQL_PLAYGROUND": "true",
+				"JWT_TOKEN_EXPIRES_IN": "2592000",
+				"JWT_TOKEN_SECRET": "7MHbYOo15bPugOkEK8zO5bfSY4nnhkWEwLdwHvUAp4aUg+1gHVdSY3zT9CkV",
+				"SETTINGS_MANAGER_FUNCTION": "arn:aws:lambda:eu-central-1:824028203338:function:99c68cd1_webiny-new-nrdrei_api_dev_settingsManager",
+				"VALIDATE_ACCESS_TOKEN_FUNCTION": "99c68cd1_webiny-new-nrdrei_api_dev_securityValidateAccessToken"
+			},
+			"role": {
+				"arn": "arn:aws:iam::824028203338:role/99c68cd1-528w2sb"
+			},
+			"arn": "arn:aws:lambda:eu-central-1:824028203338:function:99c68cd1_webiny-new-nrdrei_api_dev_i18nGraphQL",
+			"region": "eu-central-1",
+			"permissions": []
+		},
+		"i18nLocales": {
+			"name": "99c68cd1_webiny-new-nrdrei_api_dev_i18nLocales",
+			"description": "AWS Lambda Component",
+			"memory": 256,
+			"timeout": 30,
+			"code": "./i18n/locales/build",
+			"shims": [],
+			"handler": "handler.handler",
+			"runtime": "nodejs10.x",
+			"env": {
+				"DB_PROXY_FUNCTION": "arn:aws:lambda:eu-central-1:824028203338:function:99c68cd1_webiny-new-nrdrei_api_dev_databaseProxy",
+				"DEBUG": "webiny*"
+			},
+			"role": {
+				"arn": "arn:aws:iam::824028203338:role/99c68cd1-p56lt8r"
+			},
+			"arn": "arn:aws:lambda:eu-central-1:824028203338:function:99c68cd1_webiny-new-nrdrei_api_dev_i18nLocales",
+			"region": "eu-central-1",
+			"permissions": []
+		},
+		"pageBuilderInstallation": {
+			"key": "page-builder-installation.zip"
+		},
+		"pageBuilderGraphQL": {
+			"name": "99c68cd1_webiny-new-nrdrei_api_dev_pageBuilderGraphQL",
+			"description": "Page Builder GraphQL API",
+			"memory": 512,
+			"timeout": 30,
+			"code": "./pageBuilder/build",
+			"shims": [],
+			"handler": "handler.handler",
+			"runtime": "nodejs10.x",
+			"env": {
+				"COGNITO_REGION": "eu-central-1",
+				"COGNITO_USER_POOL_ID": "eu-central-1_YjcEzpeok",
+				"DEBUG": "true",
+				"DB_PROXY_FUNCTION": "arn:aws:lambda:eu-central-1:824028203338:function:99c68cd1_webiny-new-nrdrei_api_dev_databaseProxy",
+				"GRAPHQL_INTROSPECTION": "true",
+				"GRAPHQL_PLAYGROUND": "true",
+				"JWT_TOKEN_EXPIRES_IN": "2592000",
+				"JWT_TOKEN_SECRET": "7MHbYOo15bPugOkEK8zO5bfSY4nnhkWEwLdwHvUAp4aUg+1gHVdSY3zT9CkV",
+				"SETTINGS_MANAGER_FUNCTION": "arn:aws:lambda:eu-central-1:824028203338:function:99c68cd1_webiny-new-nrdrei_api_dev_settingsManager",
+				"VALIDATE_ACCESS_TOKEN_FUNCTION": "99c68cd1_webiny-new-nrdrei_api_dev_securityValidateAccessToken",
+				"INSTALLATION_S3_BUCKET": "99c68cd1-webiny-new-nrdrei-files",
+				"INSTALLATION_FILES_ZIP_KEY": "page-builder-installation.zip"
+			},
+			"role": {
+				"arn": "arn:aws:iam::824028203338:role/99c68cd1-hw6ze6vb"
+			},
+			"arn": "arn:aws:lambda:eu-central-1:824028203338:function:99c68cd1_webiny-new-nrdrei_api_dev_pageBuilderGraphQL",
+			"region": "eu-central-1",
+			"permissions": []
+		},
+		"formBuilderGraphQL": {
+			"name": "99c68cd1_webiny-new-nrdrei_api_dev_formBuilderGraphQL",
+			"description": "Form Builder GraphQL API",
+			"memory": 512,
+			"timeout": 30,
+			"code": "./formBuilder/build",
+			"shims": [],
+			"handler": "handler.handler",
+			"runtime": "nodejs10.x",
+			"env": {
+				"COGNITO_REGION": "eu-central-1",
+				"COGNITO_USER_POOL_ID": "eu-central-1_YjcEzpeok",
+				"DEBUG": "true",
+				"DB_PROXY_FUNCTION": "arn:aws:lambda:eu-central-1:824028203338:function:99c68cd1_webiny-new-nrdrei_api_dev_databaseProxy",
+				"GRAPHQL_INTROSPECTION": "true",
+				"GRAPHQL_PLAYGROUND": "true",
+				"JWT_TOKEN_EXPIRES_IN": "2592000",
+				"JWT_TOKEN_SECRET": "7MHbYOo15bPugOkEK8zO5bfSY4nnhkWEwLdwHvUAp4aUg+1gHVdSY3zT9CkV",
+				"SETTINGS_MANAGER_FUNCTION": "arn:aws:lambda:eu-central-1:824028203338:function:99c68cd1_webiny-new-nrdrei_api_dev_settingsManager",
+				"VALIDATE_ACCESS_TOKEN_FUNCTION": "99c68cd1_webiny-new-nrdrei_api_dev_securityValidateAccessToken",
+				"I18N_LOCALES_FUNCTION": "99c68cd1_webiny-new-nrdrei_api_dev_i18nLocales"
+			},
+			"role": {
+				"arn": "arn:aws:iam::824028203338:role/99c68cd1-kwhpwmn"
+			},
+			"arn": "arn:aws:lambda:eu-central-1:824028203338:function:99c68cd1_webiny-new-nrdrei_api_dev_formBuilderGraphQL",
+			"region": "eu-central-1",
+			"permissions": []
+		},
+		"cmsGraphQL": {
+			"name": "99c68cd1_webiny-new-nrdrei_api_dev_cmsGraphQL",
+			"description": "CMS Admin GraphQL API",
+			"memory": 512,
+			"timeout": 10,
+			"code": "./cms/graphql/build",
+			"shims": [],
+			"handler": "handler.handler",
+			"runtime": "nodejs10.x",
+			"env": {
+				"COGNITO_REGION": "eu-central-1",
+				"COGNITO_USER_POOL_ID": "eu-central-1_YjcEzpeok",
+				"DEBUG": "true",
+				"DB_PROXY_FUNCTION": "arn:aws:lambda:eu-central-1:824028203338:function:99c68cd1_webiny-new-nrdrei_api_dev_databaseProxy",
+				"GRAPHQL_INTROSPECTION": "true",
+				"GRAPHQL_PLAYGROUND": "true",
+				"JWT_TOKEN_EXPIRES_IN": "2592000",
+				"JWT_TOKEN_SECRET": "7MHbYOo15bPugOkEK8zO5bfSY4nnhkWEwLdwHvUAp4aUg+1gHVdSY3zT9CkV",
+				"SETTINGS_MANAGER_FUNCTION": "arn:aws:lambda:eu-central-1:824028203338:function:99c68cd1_webiny-new-nrdrei_api_dev_settingsManager",
+				"VALIDATE_ACCESS_TOKEN_FUNCTION": "99c68cd1_webiny-new-nrdrei_api_dev_securityValidateAccessToken",
+				"CMS_DATA_MANAGER_FUNCTION": "99c68cd1_webiny-new-nrdrei_api_dev_cmsDataManager"
+			},
+			"role": {
+				"arn": "arn:aws:iam::824028203338:role/99c68cd1-90l65ud"
+			},
+			"arn": "arn:aws:lambda:eu-central-1:824028203338:function:99c68cd1_webiny-new-nrdrei_api_dev_cmsGraphQL",
+			"region": "eu-central-1",
+			"permissions": []
+		},
+		"cmsContent": {
+			"name": "99c68cd1_webiny-new-nrdrei_api_dev_cmsContent",
+			"description": "CMS Content API",
+			"memory": 512,
+			"timeout": 10,
+			"code": "./cms/content/build",
+			"shims": [],
+			"handler": "handler.handler",
+			"runtime": "nodejs10.x",
+			"env": {
+				"COGNITO_REGION": "eu-central-1",
+				"COGNITO_USER_POOL_ID": "eu-central-1_YjcEzpeok",
+				"DEBUG": "true",
+				"DB_PROXY_FUNCTION": "arn:aws:lambda:eu-central-1:824028203338:function:99c68cd1_webiny-new-nrdrei_api_dev_databaseProxy",
+				"GRAPHQL_INTROSPECTION": "true",
+				"GRAPHQL_PLAYGROUND": "true",
+				"JWT_TOKEN_EXPIRES_IN": "2592000",
+				"JWT_TOKEN_SECRET": "7MHbYOo15bPugOkEK8zO5bfSY4nnhkWEwLdwHvUAp4aUg+1gHVdSY3zT9CkV",
+				"SETTINGS_MANAGER_FUNCTION": "arn:aws:lambda:eu-central-1:824028203338:function:99c68cd1_webiny-new-nrdrei_api_dev_settingsManager",
+				"VALIDATE_ACCESS_TOKEN_FUNCTION": "99c68cd1_webiny-new-nrdrei_api_dev_securityValidateAccessToken",
+				"I18N_LOCALES_FUNCTION": "99c68cd1_webiny-new-nrdrei_api_dev_i18nLocales",
+				"CMS_DATA_MANAGER_FUNCTION": "99c68cd1_webiny-new-nrdrei_api_dev_cmsDataManager"
+			},
+			"role": {
+				"arn": "arn:aws:iam::824028203338:role/99c68cd1-e3vi17o"
+			},
+			"arn": "arn:aws:lambda:eu-central-1:824028203338:function:99c68cd1_webiny-new-nrdrei_api_dev_cmsContent",
+			"region": "eu-central-1",
+			"permissions": []
+		},
+		"cmsDataManager": {
+			"name": "99c68cd1_webiny-new-nrdrei_api_dev_cmsDataManager",
+			"description": "CMS Data Manager",
+			"memory": 512,
+			"timeout": 10,
+			"code": "./cms/dataManager/build",
+			"shims": [],
+			"handler": "handler.handler",
+			"runtime": "nodejs10.x",
+			"env": {
+				"MONGODB_SERVER": "[mongodb://webiny:mDknLGej9qUqT64@18.157.145.125/webiny-nicolas2?retryWrites=true]",
+				"MONGODB_NAME": "webiny-nicolas2",
+				"I18N_LOCALES_FUNCTION": "99c68cd1_webiny-new-nrdrei_api_dev_i18nLocales"
+			},
+			"role": {
+				"arn": "arn:aws:iam::824028203338:role/99c68cd1-kqep9"
+			},
+			"arn": "arn:aws:lambda:eu-central-1:824028203338:function:99c68cd1_webiny-new-nrdrei_api_dev_cmsDataManager",
+			"region": "eu-central-1",
+			"permissions": []
+		},
+		"api": {
+			"name": "99c68cd1_webiny-new-nrdrei_api_dev_api",
+			"id": "4lqxwm8isf",
+			"endpoints": [
+				{
+					"path": "/graphql",
+					"method": "ANY",
+					"function": "arn:aws:lambda:eu-central-1:824028203338:function:99c68cd1_webiny-new-nrdrei_api_dev_apolloGateway",
+					"authorizer": null,
+					"url": "https://4lqxwm8isf.execute-api.eu-central-1.amazonaws.com/prod/graphql",
+					"id": "uejzq0"
+				},
+				{
+					"path": "/files/{path}",
+					"method": "ANY",
+					"function": "arn:aws:lambda:eu-central-1:824028203338:function:99c68cd1_webiny-new-nrdrei_api_dev_filesDownload",
+					"authorizer": null,
+					"url": "https://4lqxwm8isf.execute-api.eu-central-1.amazonaws.com/prod/files/{path}",
+					"id": "53f66i"
+				},
+				{
+					"path": "/cms/{key+}",
+					"method": "ANY",
+					"function": "arn:aws:lambda:eu-central-1:824028203338:function:99c68cd1_webiny-new-nrdrei_api_dev_cmsContent",
+					"authorizer": null,
+					"url": "https://4lqxwm8isf.execute-api.eu-central-1.amazonaws.com/prod/cms/{key+}",
+					"id": "8hyu3g"
+				}
+			],
+			"url": "https://4lqxwm8isf.execute-api.eu-central-1.amazonaws.com/prod"
+		},
+		"cdn": {
+			"id": "E1JYVRMPW8GIY4",
+			"arn": "arn:aws:cloudfront::824028203338:distribution/E1JYVRMPW8GIY4",
+			"url": "https://d2jbt1nfqlt5zj.cloudfront.net",
+			"region": "us-east-1",
+			"enabled": true,
+			"comment": "",
+			"origins": [
+				{
+					"url": "https://4lqxwm8isf.execute-api.eu-central-1.amazonaws.com/prod",
+					"pathPatterns": {
+						"/graphql": {
+							"ttl": 0,
+							"forward": {
+								"headers": [
+									"Accept",
+									"Accept-Language"
+								]
+							},
+							"allowedHttpMethods": [
+								"GET",
+								"HEAD",
+								"OPTIONS",
+								"PUT",
+								"POST",
+								"PATCH",
+								"DELETE"
+							]
+						},
+						"/files/*": {
+							"ttl": 2592000
+						},
+						"/cms*": {
+							"ttl": 0,
+							"forward": {
+								"headers": [
+									"Accept",
+									"Accept-Language"
+								]
+							},
+							"allowedHttpMethods": [
+								"GET",
+								"HEAD",
+								"OPTIONS",
+								"PUT",
+								"POST",
+								"PATCH",
+								"DELETE"
+							]
+						}
+					}
+				}
+			]
+		}
+	}
+}

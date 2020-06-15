@@ -1,0 +1,20 @@
+{
+	"name": "99c68cd1_webiny-new-nrdrei_api_dev_filesDownload",
+	"description": "Serves previously uploaded files.",
+	"memory": 512,
+	"timeout": 10,
+	"code": "./files/download/build",
+	"shims": [],
+	"handler": "handler.handler",
+	"runtime": "nodejs10.x",
+	"env": {
+		"S3_BUCKET": "99c68cd1-webiny-new-nrdrei-files",
+		"IMAGE_TRANSFORMER_FUNCTION": "arn:aws:lambda:eu-central-1:824028203338:function:99c68cd1_webiny-new-nrdrei_api_dev_imageTransformer"
+	},
+	"role": {
+		"arn": "arn:aws:iam::824028203338:role/99c68cd1-30r6cwi"
+	},
+	"arn": "arn:aws:lambda:eu-central-1:824028203338:function:99c68cd1_webiny-new-nrdrei_api_dev_filesDownload",
+	"region": "eu-central-1",
+	"permissions": []
+}
