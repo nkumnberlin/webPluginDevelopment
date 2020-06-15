@@ -45,12 +45,10 @@ const SwitchElement = (props) => (
                     //     debugger;
                     //     return pl ? pl.plugin : null;
                     // }, []);
-                    debugger;
                     return (
                         <div className={className} style={elementStyle}>
                             <div id={element.id}/>
                             <StyledSwitch checked={checked}
-
                                           onChange={evt => setChecked(!!evt.currentTarget.checked)}/>
                         </div>
                     )
@@ -61,6 +59,8 @@ const SwitchElement = (props) => (
     </ElementRoot>
 )
 
-export default connect<any, any, any>(
-    (state, props) => ({element: getElement(state, props.elementId)}),
-)(SwitchElement)
+export default SwitchElement;
+
+// export default connect<any, any, any>(
+//     (state, props) => ({element: getElement(state, props.elementId)}),
+// )(SwitchElement)

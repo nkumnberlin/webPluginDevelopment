@@ -9,7 +9,7 @@ export default {
     name: "pb-editor-page-element-settings-fontchange",
     type: "pb-editor-page-element-settings",
     renderAction() {
-        return <Action tooltip={"Ändere die Farbe"} plugin={this.name} icon={"<ColorIcon/>"}/>
+        return <Action tooltip={"Ändere die Farbe"} plugin={this.name} icon={"Fa"}/>
     },
     renderMenu() {
         return <Settings/>
