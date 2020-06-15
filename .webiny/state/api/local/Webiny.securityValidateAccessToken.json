@@ -1,0 +1,22 @@
+{
+	"output": {
+		"name": "99c68cd1_webiny-new-nrdrei_api_local_securityValidateAccessToken",
+		"description": "AWS Lambda Component",
+		"memory": 256,
+		"timeout": 30,
+		"code": "./security/validateAccessToken/build",
+		"shims": [],
+		"handler": "handler.handler",
+		"runtime": "nodejs10.x",
+		"env": {
+			"DB_PROXY_FUNCTION": "arn:aws:lambda:eu-central-1:824028203338:function:99c68cd1_webiny-new-nrdrei_api_local_databaseProxy",
+			"DEBUG": "webiny*"
+		},
+		"role": {
+			"arn": "arn:aws:iam::824028203338:role/99c68cd1-smdusna"
+		},
+		"arn": "arn:aws:lambda:eu-central-1:824028203338:function:99c68cd1_webiny-new-nrdrei_api_local_securityValidateAccessToken",
+		"region": "eu-central-1",
+		"permissions": []
+	}
+}

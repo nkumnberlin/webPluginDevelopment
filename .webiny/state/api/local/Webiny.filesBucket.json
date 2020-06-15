@@ -1,0 +1,17 @@
+{
+	"name": "99c68cd1-webiny-new-nrdrei-files",
+	"region": "eu-central-1",
+	"accelerated": true,
+	"deleteBucketOnRemove": false,
+	"notificationConfiguration": {
+		"LambdaFunctionConfigurations": [
+			{
+				"LambdaFunctionArn": "arn:aws:lambda:eu-central-1:824028203338:function:99c68cd1_webiny-new-nrdrei_api_local_filesManage",
+				"Events": [
+					"s3:ObjectRemoved:*"
+				]
+			}
+		]
+	},
+	"url": "https://99c68cd1-webiny-new-nrdrei-files.s3.amazonaws.com"
+}

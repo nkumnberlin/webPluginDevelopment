@@ -1,0 +1,56 @@
+{
+	"output": {
+		"id": "E24NOLO8DFF3ZK",
+		"arn": "arn:aws:cloudfront::824028203338:distribution/E24NOLO8DFF3ZK",
+		"url": "https://d1rhwd0gpebvek.cloudfront.net",
+		"region": "us-east-1",
+		"enabled": true,
+		"comment": "",
+		"origins": [
+			{
+				"url": "https://ku66l5fg34.execute-api.eu-central-1.amazonaws.com/prod",
+				"pathPatterns": {
+					"/graphql": {
+						"ttl": 0,
+						"forward": {
+							"headers": [
+								"Accept",
+								"Accept-Language"
+							]
+						},
+						"allowedHttpMethods": [
+							"GET",
+							"HEAD",
+							"OPTIONS",
+							"PUT",
+							"POST",
+							"PATCH",
+							"DELETE"
+						]
+					},
+					"/files/*": {
+						"ttl": 2592000
+					},
+					"/cms*": {
+						"ttl": 0,
+						"forward": {
+							"headers": [
+								"Accept",
+								"Accept-Language"
+							]
+						},
+						"allowedHttpMethods": [
+							"GET",
+							"HEAD",
+							"OPTIONS",
+							"PUT",
+							"POST",
+							"PATCH",
+							"DELETE"
+						]
+					}
+				}
+			}
+		]
+	}
+}

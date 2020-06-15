@@ -1,0 +1,32 @@
+{
+	"output": {
+		"name": "99c68cd1_webiny-new-nrdrei_api_local_pageBuilderGraphQL",
+		"description": "Page Builder GraphQL API",
+		"memory": 512,
+		"timeout": 30,
+		"code": "./pageBuilder/build",
+		"shims": [],
+		"handler": "handler.handler",
+		"runtime": "nodejs10.x",
+		"env": {
+			"COGNITO_REGION": "eu-central-1",
+			"COGNITO_USER_POOL_ID": "eu-central-1_6EA5ZIuTC",
+			"DEBUG": "true",
+			"DB_PROXY_FUNCTION": "arn:aws:lambda:eu-central-1:824028203338:function:99c68cd1_webiny-new-nrdrei_api_local_databaseProxy",
+			"GRAPHQL_INTROSPECTION": "true",
+			"GRAPHQL_PLAYGROUND": "true",
+			"JWT_TOKEN_EXPIRES_IN": "2592000",
+			"JWT_TOKEN_SECRET": "7MHbYOo15bPugOkEK8zO5bfSY4nnhkWEwLdwHvUAp4aUg+1gHVdSY3zT9CkV",
+			"SETTINGS_MANAGER_FUNCTION": "arn:aws:lambda:eu-central-1:824028203338:function:99c68cd1_webiny-new-nrdrei_api_local_settingsManager",
+			"VALIDATE_ACCESS_TOKEN_FUNCTION": "99c68cd1_webiny-new-nrdrei_api_local_securityValidateAccessToken",
+			"INSTALLATION_S3_BUCKET": "99c68cd1-webiny-new-nrdrei-files",
+			"INSTALLATION_FILES_ZIP_KEY": "page-builder-installation.zip"
+		},
+		"role": {
+			"arn": "arn:aws:iam::824028203338:role/99c68cd1-rdp6jjl"
+		},
+		"arn": "arn:aws:lambda:eu-central-1:824028203338:function:99c68cd1_webiny-new-nrdrei_api_local_pageBuilderGraphQL",
+		"region": "eu-central-1",
+		"permissions": []
+	}
+}

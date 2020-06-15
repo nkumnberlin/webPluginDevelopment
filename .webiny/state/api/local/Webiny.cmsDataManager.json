@@ -1,0 +1,23 @@
+{
+	"output": {
+		"name": "99c68cd1_webiny-new-nrdrei_api_local_cmsDataManager",
+		"description": "CMS Data Manager",
+		"memory": 512,
+		"timeout": 10,
+		"code": "./cms/dataManager/build",
+		"shims": [],
+		"handler": "handler.handler",
+		"runtime": "nodejs10.x",
+		"env": {
+			"MONGODB_SERVER": "[mongodb://webiny:mDknLGej9qUqT64@18.157.145.125/webiny-nicolas2?retryWrites=true]",
+			"MONGODB_NAME": "webiny-nicolas2",
+			"I18N_LOCALES_FUNCTION": "99c68cd1_webiny-new-nrdrei_api_local_i18nLocales"
+		},
+		"role": {
+			"arn": "arn:aws:iam::824028203338:role/99c68cd1-ykuf5fl"
+		},
+		"arn": "arn:aws:lambda:eu-central-1:824028203338:function:99c68cd1_webiny-new-nrdrei_api_local_cmsDataManager",
+		"region": "eu-central-1",
+		"permissions": []
+	}
+}

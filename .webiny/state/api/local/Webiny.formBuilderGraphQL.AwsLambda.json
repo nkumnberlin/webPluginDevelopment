@@ -1,0 +1,29 @@
+{
+	"name": "99c68cd1_webiny-new-nrdrei_api_local_formBuilderGraphQL",
+	"description": "Form Builder GraphQL API",
+	"memory": 512,
+	"timeout": 30,
+	"code": "./formBuilder/build",
+	"shims": [],
+	"handler": "handler.handler",
+	"runtime": "nodejs10.x",
+	"env": {
+		"COGNITO_REGION": "eu-central-1",
+		"COGNITO_USER_POOL_ID": "eu-central-1_6EA5ZIuTC",
+		"DEBUG": "true",
+		"DB_PROXY_FUNCTION": "arn:aws:lambda:eu-central-1:824028203338:function:99c68cd1_webiny-new-nrdrei_api_local_databaseProxy",
+		"GRAPHQL_INTROSPECTION": "true",
+		"GRAPHQL_PLAYGROUND": "true",
+		"JWT_TOKEN_EXPIRES_IN": "2592000",
+		"JWT_TOKEN_SECRET": "7MHbYOo15bPugOkEK8zO5bfSY4nnhkWEwLdwHvUAp4aUg+1gHVdSY3zT9CkV",
+		"SETTINGS_MANAGER_FUNCTION": "arn:aws:lambda:eu-central-1:824028203338:function:99c68cd1_webiny-new-nrdrei_api_local_settingsManager",
+		"VALIDATE_ACCESS_TOKEN_FUNCTION": "99c68cd1_webiny-new-nrdrei_api_local_securityValidateAccessToken",
+		"I18N_LOCALES_FUNCTION": "99c68cd1_webiny-new-nrdrei_api_local_i18nLocales"
+	},
+	"role": {
+		"arn": "arn:aws:iam::824028203338:role/99c68cd1-6a04ua"
+	},
+	"arn": "arn:aws:lambda:eu-central-1:824028203338:function:99c68cd1_webiny-new-nrdrei_api_local_formBuilderGraphQL",
+	"region": "eu-central-1",
+	"permissions": []
+}

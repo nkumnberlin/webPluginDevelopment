@@ -1,0 +1,64 @@
+{
+	"inputs": {
+		"stage": "prod",
+		"endpointTypes": [
+			"REGIONAL"
+		],
+		"region": "eu-central-1",
+		"description": "Main API Gateway",
+		"binaryMediaTypes": [
+			"*/*"
+		],
+		"endpoints": [
+			{
+				"path": "/graphql",
+				"method": "ANY",
+				"function": "arn:aws:lambda:eu-central-1:824028203338:function:99c68cd1_webiny-new-nrdrei_api_local_apolloGateway",
+				"authorizer": null
+			},
+			{
+				"path": "/files/{path}",
+				"method": "ANY",
+				"function": "arn:aws:lambda:eu-central-1:824028203338:function:99c68cd1_webiny-new-nrdrei_api_local_filesDownload",
+				"authorizer": null
+			},
+			{
+				"path": "/cms/{key+}",
+				"method": "ANY",
+				"function": "arn:aws:lambda:eu-central-1:824028203338:function:99c68cd1_webiny-new-nrdrei_api_local_cmsContent",
+				"authorizer": null
+			}
+		]
+	},
+	"id": "ku66l5fg34",
+	"endpoints": [
+		{
+			"path": "/graphql",
+			"method": "ANY",
+			"function": "arn:aws:lambda:eu-central-1:824028203338:function:99c68cd1_webiny-new-nrdrei_api_local_apolloGateway",
+			"authorizer": null,
+			"url": "https://ku66l5fg34.execute-api.eu-central-1.amazonaws.com/prod/graphql",
+			"id": "3tbbrl"
+		},
+		{
+			"path": "/files/{path}",
+			"method": "ANY",
+			"function": "arn:aws:lambda:eu-central-1:824028203338:function:99c68cd1_webiny-new-nrdrei_api_local_filesDownload",
+			"authorizer": null,
+			"url": "https://ku66l5fg34.execute-api.eu-central-1.amazonaws.com/prod/files/{path}",
+			"id": "89y52w"
+		},
+		{
+			"path": "/cms/{key+}",
+			"method": "ANY",
+			"function": "arn:aws:lambda:eu-central-1:824028203338:function:99c68cd1_webiny-new-nrdrei_api_local_cmsContent",
+			"authorizer": null,
+			"url": "https://ku66l5fg34.execute-api.eu-central-1.amazonaws.com/prod/cms/{key+}",
+			"id": "8lw6mj"
+		}
+	],
+	"name": "99c68cd1_webiny-new-nrdrei_api_local_api",
+	"region": "eu-central-1",
+	"stage": "prod",
+	"url": "https://ku66l5fg34.execute-api.eu-central-1.amazonaws.com/prod"
+}
