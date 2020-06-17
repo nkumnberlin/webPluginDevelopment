@@ -52,9 +52,9 @@ export default () => {
                 type: "switch",
                 elements: [],
                 data: {
-                    dd: {
+                    switch: {
                         height: 10,
-                        text: "dasd"
+                        state: false
                     },
                     settings: {
                         horizontalAlign: "center",

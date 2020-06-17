@@ -19,9 +19,7 @@ const Settings = props => {
 
     const updateColor = useHandler(props, ({element, updateElement}) => async (data, form) => {
         const newData = {}
-
         const newElement = set(element, key, newData);
-
         updateElement({element: newElement});
     });
     const onColorChangeComplete = useHandler(props, ({element, updateElement}) => async (data, form) => {
