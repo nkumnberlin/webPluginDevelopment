@@ -3,7 +3,8 @@ import "./App.scss";
 import plugin from "./plugins";
 import {registerPlugins} from '@webiny/plugins';
 
-registerPlugins(plugin)
+
+registerPlugins(plugin);
 
 export default adminTemplate({
     cognito: {

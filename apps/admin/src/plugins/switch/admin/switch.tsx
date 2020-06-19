@@ -56,7 +56,8 @@ const SwitchElement = props => {
         </ElementRoot>
     )
 }
+
 export default connect<any, any, any>(
     (state, props) => ({element: getElement(state, props.element.id)}),
-    ({updateElement: updateElement})
+    {updateElement},
 )(SwitchElement)

@@ -32,11 +32,14 @@ export default () => {
         },
         settings: [
             "pb-editor-page-element-settings-horizontal-align",
+            "",
             "pb-editor-page-element-settings-delete",
+            "",
             "pb-editor-page-element-settings-padding",
             "pb-editor-page-element-settings-margin",
             "pb-editor-page-element-settings-width",
             "pb-editor-page-element-settings-height",
+            "",
             "pb-editor-page-element-settings-background",
             "pb-editor-page-element-settings-fontchange",
 
